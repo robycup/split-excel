@@ -74,6 +74,31 @@ kubectl get service excel-splitter-service
 
 3. Access the application using the external IP address
 
+## Render Deployment
+
+1. Push your code to a Git repository (GitHub, GitLab, or Bitbucket)
+
+2. Log in to [Render](https://render.com/) and create a new Web Service
+
+3. Connect your Git repository
+
+4. Select "Docker" as the environment
+
+5. Configure the service:
+   - Name: excel-splitter (or your preferred name)
+   - Environment: Docker
+   - Branch: main (or your default branch)
+   - Plan: Free (or select a paid plan for production use)
+
+6. Add a disk for persistent storage:
+   - Under the "Disks" tab, add a new disk
+   - Mount path: `/app/uploads`
+   - Size: 1 GB (adjust as needed)
+
+7. Click "Create Web Service"
+
+8. Your application will be available at the URL provided by Render (e.g., `https://excel-splitter.onrender.com`)
+
 ## Usage
 
 1. Open the application in your web browser

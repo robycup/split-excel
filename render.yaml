@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: excel-splitter
+    env: docker
+    plan: free  # Change to starter/standard for production use
+    healthCheckPath: /
+    envVars:
+      - key: PORT
+        value: 5000
+    disk:
+      name: uploads
+      mountPath: /app/uploads
+      sizeGB: 1
